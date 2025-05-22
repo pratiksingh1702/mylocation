@@ -24,7 +24,7 @@ socket.on("allUsers", (users) => {
 
 socket.on("reciveLocation", ({ id, latitude, longitude }) => {
   if (id === myId) {
-    map.setView([latitude, longitude], 13);
+    map.setView([latitude, longitude]);
   }
 
   if (markers[id]) {

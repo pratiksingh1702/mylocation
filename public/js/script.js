@@ -42,7 +42,7 @@ socket.on("removeMarker", ({ id }) => {
 });
 
 // Start location tracking
-if (navigator.geolocation) {
+window.onload=function(){if (navigator.geolocation) {
   navigator.geolocation.watchPosition(
     (position) => {
       const { latitude, longitude } = position.coords;
@@ -59,4 +59,4 @@ if (navigator.geolocation) {
   );
 } else {
   console.log("Geolocation is not supported by this browser.");
-}
+}}
